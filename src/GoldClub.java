@@ -1,25 +1,23 @@
-public class GoldClub extends MovieClub{
+public class GoldClub extends SeniorClub{
     public GoldClub(double ticketPrice, String benefits, double yearlyFee) {
         super(ticketPrice, benefits, yearlyFee);
     }
 
-    //Overrides for 3 key values
+    //Overrides for 4 key values
     @Override
     public double getTicketPrice(){
         return super.getTicketPrice()*0.9;
     }
     @Override
     public String getBenefits(){
-        return "Free soda refill";
+        return super.getBenefits()+", Free soda refill";
     }
     @Override
     public double getYearlyFee(){
-        return super.getYearlyFee()+15;
+        return super.getYearlyFee();
     }
     @Override
     public String toString() {
-        String goldClubInfo = super.toString() + "\n" +
-                "Additional benefits: " + getBenefits();
-        return goldClubInfo;
+        return super.toString();
     }
 }

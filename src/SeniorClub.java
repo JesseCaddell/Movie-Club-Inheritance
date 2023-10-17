@@ -3,7 +3,7 @@ public class SeniorClub extends MovieClub{
         super(ticketPrice, benefits, yearlyFee);
     }
 
-    //Overrides for 3 key values
+    //Overrides for 4 key values
     @Override
     public double getTicketPrice(){
         return super.getTicketPrice()*0.5;
@@ -14,12 +14,11 @@ public class SeniorClub extends MovieClub{
     }
     @Override
     public double getYearlyFee(){
-        return super.getYearlyFee()+5;
+        return super.getYearlyFee();
     }
     @Override
     public String toString() {
-        String seniorClubInfo = super.toString() + "\n" +
+        return super.toString() + "\n" +
                 "Additional benefits: " + getBenefits();
-        return seniorClubInfo;
     }
 }
